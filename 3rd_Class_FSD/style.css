@@ -1,0 +1,30 @@
+*{
+margin :0;
+padding :0;
+box-sizing :border-box;
+}
+
+html,body{
+height:100%;
+width:100%;
+background-color: rgb(46, 44, 44);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 1rem;
+}
+.text{
+    font-size: xx-large;
+}
+#btn{
+    cursor: pointer;
+    height: 80px;
+    width: 120px;
+    border: 2px solid black;
+    border-radius: 30%;
+    background-color: rgb(88, 87, 87);
+    color: white;
+}
+body > p{
+    color: white;
+}

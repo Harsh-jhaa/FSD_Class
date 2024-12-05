@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React CDN</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: black;
+        color: white;
+      }
+      .item1 {
+        color: red;
+        font-size: 2rem;
+      }
+      .item2 {
+        color: green;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent"></div>
+
+    <!-- react cdn links -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- babel cdn -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- js script -->
+    <!-- <script >
+      const parent = document.querySelector('#parent');
+      const root = ReactDOM.createRoot(parent);
+      const element = React.createElement('h1', null, 'Hello World in React');
+      //   root.render(element);
+      const item1 = React.createElement('li', { className: 'item1' }, 'item1');
+      const item2 = React.createElement('li', { className: 'item2' }, 'item2');
+      const list = React.createElement(
+        'ul',
+        { className: 'list' },
+        item1,
+        item2
+      );
+      const final = React.createElement(
+        'ul',
+        { className: 'final' },
+        element,
+        item1,
+        item2
+      );
+
+      root.render(final);
+    </script> -->
+    <script type="text/babel">
+      const parent = document.querySelector('#parent');
+      const root = ReactDOM.createRoot(parent);
+      const heading = (
+        <div>
+          <h1 className='heading'>Hello World in React</h1>
+          <ul>
+            <li className='item1'>Item 1</li>
+            <li className='item2'>Item 2</li>
+          </ul>
+        </div>
+      );
+
+      root.render(heading);
+    </script>
+  </body>
+</html>
