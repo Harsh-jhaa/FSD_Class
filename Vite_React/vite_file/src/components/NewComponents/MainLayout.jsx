@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
   return (
-    <div className='h-screen '>
+    <div className='h-screen w-full fixed top-0 left-0 '>
       <div className='h-[5rem] w-full bg-black text-white text-right`'>
         <h1 className='text-2xl text-center pt-[1.5rem]'>
           Hello, Welcome to the Main Layout Page
