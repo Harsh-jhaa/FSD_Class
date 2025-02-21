@@ -2,6 +2,7 @@ import express from 'express';
 
 const app = express();
 const port = 3000;
+app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hi this is express server running');
 });
@@ -21,6 +22,10 @@ app.get('/api/:product', (req, res) => {
   } catch (error) {
     console.log(`Error ${error.message}`);
   }
+});
+app.post('/users', (req, res) => {
+  const { name } = req.body;
+  res.send(`my name is ${name}`);
 });
 
 app.listen(port, () => {
